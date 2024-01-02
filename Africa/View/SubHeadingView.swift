@@ -9,13 +9,15 @@ import SwiftUI
 
 struct SubHeadingView: View {
     //MARK: - PROPERTIES
+    let imageName : String
+    let cap  : String
     //MARK: - BODY
     var body: some View {
         HStack {
-            Image(systemName: "photo.on.rectangle.angled")
+            Image(systemName: imageName)
                 .foregroundColor(.accentColor)
                 .imageScale(.large)
-            Text("Wilderness in Pictures")
+            Text(cap)
                 .font(.title3)
             .fontWeight(.bold)
         }//: HStack
@@ -27,5 +29,5 @@ struct SubHeadingView: View {
 
 //MARK: - PREVIEW
 #Preview {
-    SubHeadingView()
+    SubHeadingView(imageName: "square", cap: "Hola")
 }
